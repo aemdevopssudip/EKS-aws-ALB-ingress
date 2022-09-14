@@ -1,10 +1,12 @@
-# EKS-aws-ALB-ingress
-Resource for ingressclass, deployment, service and ingress
+## EKS-aws-ALB-ingress
+  
+   Resource for ingressclass, deployment, service and ingress
 
-Steps after creating IAM roles for eks-cluster, workernode, vpc, public-private subnets, NAT gateway, EKS cluster and worker node setup, install kubectl, eksctl, helm :
+## Steps after creating IAM roles for eks-cluster, workernode, vpc, public-private subnets, NAT gateway, EKS cluster and worker node setup, install kubectl, eksctl, helm :
 
-# helm repo add eks https://aws.github.io/eks-charts
-# helm repo update
+## helm repo add eks https://aws.github.io/eks-charts
+   
+   #helm repo update
 
 ## Tags on subnets
    
