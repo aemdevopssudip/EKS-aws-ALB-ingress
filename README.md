@@ -11,6 +11,8 @@
 
 ## Tags on subnets
    
+    #First enable auto-assign public IPv4 address for all subnets
+   
    # for each subnet
 
      Key: kubernetes.io/cluster/yourEKSClusterName
