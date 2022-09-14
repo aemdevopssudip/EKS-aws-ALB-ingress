@@ -6,8 +6,9 @@
 
 ## Add the eks-charts to helm repository and Update your local repo to make sure that you have the most recent charts
 
-   #helm repo add eks https://aws.github.io/eks-charts
-   #helm repo update
+    #helm repo add eks https://aws.github.io/eks-charts
+    
+    #helm repo update
 
 ## Tags on subnets
    
