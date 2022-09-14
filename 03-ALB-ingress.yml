@@ -7,7 +7,7 @@ metadata:
     app: app1-nginx
   annotations:
     # Load Balancer Name
-    alb.ingress.kubernetes.io/load-balancer-name: app1ingress
+    alb.ingress.kubernetes.io/load-balancer-name: app1ingress-rules
     alb.ingress.kubernetes.io/scheme: internet-facing
     # Health Check Settings
     alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
@@ -20,8 +20,13 @@ metadata:
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
 spec:
   ingressClassName: sudip-14sep-aws-ingress-class # Ingress Class
-  defaultBackend:
-    service:
-      name: app1-nginx-nodeport-service
-      port:
-        number: 80
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: app1-nginx-nodeport-service
+            port:
+              number: 80
