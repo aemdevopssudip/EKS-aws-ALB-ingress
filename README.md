@@ -4,8 +4,9 @@
 
 ## Steps after creating IAM roles for eks-cluster, workernode, vpc, public-private subnets, NAT gateway, EKS cluster and worker node setup, install kubectl, eksctl, helm :
 
-## helm repo add eks https://aws.github.io/eks-charts
-   
+## Add the eks-charts to helm repository and Update your local repo to make sure that you have the most recent charts
+
+   #helm repo add eks https://aws.github.io/eks-charts
    #helm repo update
 
 ## Tags on subnets
@@ -60,7 +61,9 @@
     
     #eksctl  get iamserviceaccount --cluster sudip-14sep-eks-cluster   
     #kubectl get sa sudip-14sep-aws-load-balancer-service-account -n kube-system
-  
+     
+     Go to cloudFormation in aws and check there from stacks
+     
   ## Install the AWS Load Balancer Controller using Helm V3
   
      #helm install sudip-14sep-aws-load-balancer-controller eks/aws-load-balancer-controller \
