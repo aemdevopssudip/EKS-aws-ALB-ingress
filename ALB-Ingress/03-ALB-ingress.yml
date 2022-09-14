@@ -20,6 +20,11 @@ metadata:
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
 spec:
   ingressClassName: sudip-14sep-aws-ingress-class # Ingress Class
+#  defaultBackend:
+#    service:
+#      name: app1-nginx-nodeport-service
+#      port:
+#        number: 80 
   rules:
   - http:
       paths:
