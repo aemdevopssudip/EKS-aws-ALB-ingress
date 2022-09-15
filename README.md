@@ -28,10 +28,6 @@
 
      Key: kubernetes.io/role/internal-elb
      Value: 1
-  
- ## Configure kubeconfig for kubectl
-
-      aws eks --region ap-northeast-1 update-kubeconfig --name sudip-14sep-eks-cluster
    
  ## Registry for ap-northeast-1
    
