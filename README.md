@@ -74,9 +74,14 @@
         --set vpcId=vpc-0165a396e41e292a3 \
         --set image.repository=602401143452.dkr.ecr.ap-northeast-1.amazonaws.com/amazon/aws-load-balancer-controller
       
+      #helm list -n kube-system
       #kubectl -n kube-system get deployment 
       #kubectl -n kube-system get deployment sudip-14sep-aws-load-balancer-controller
       #kubectl get pods -n kube-system
+      
+      Delete/uninstall aws load balancer controller ::
+      
+       #helm delete sudip-6oct-aws-load-balancer-controller -n kube-system
    
    ##  Create default ingressclass, nginx app1 deployment and service, ingress
    
